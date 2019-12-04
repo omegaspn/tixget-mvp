@@ -1,6 +1,6 @@
 import React, { lazy } from "react";
 import { HashRouter, Route } from "react-router-dom";
-import Loading from "../src/components/Loading/index";
+import { Loading } from "../src/components";
 const Intro = lazy(() => import("./pages/Intro"));
 
 const App: React.FC = () => {
