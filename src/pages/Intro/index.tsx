@@ -2,8 +2,9 @@ import React, { FunctionComponent } from "react";
 import { EventCard, Navbar } from "../../components";
 import { Flex, Text } from "rebass";
 import { t } from "../../i18n";
+import { PropsWithHistory } from "../../model";
 
-const Intro: FunctionComponent = () => {
+const Intro: FunctionComponent<PropsWithHistory> = ({ history }) => {
   return (
     <>
       <Navbar />
@@ -12,9 +13,8 @@ const Intro: FunctionComponent = () => {
           {t.reccommend.title}
         </Text>
       </Flex>
-      <Flex justifyContent="center">
-        <EventCard></EventCard>
-      </Flex>
+
+      <EventCard history={history}></EventCard>
     </>
   );
 };

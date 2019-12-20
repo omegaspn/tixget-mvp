@@ -1,7 +1,14 @@
 import React, { FunctionComponent } from "react";
+import { Navbar } from "../../components";
+import TicketCard from "../../components/TicketCard";
 
 const TicketList: FunctionComponent = () => {
-  return <>TicketList</>;
+  return (
+    <>
+      <Navbar />
+      <TicketCard></TicketCard>
+    </>
+  );
 };
 
 export default TicketList;

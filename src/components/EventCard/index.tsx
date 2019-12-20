@@ -2,7 +2,9 @@ import React, { FunctionComponent } from "react";
 import { Box, Text } from "rebass";
 import { t } from "../../i18n";
 import styled from "styled-components";
-const EventCard: FunctionComponent = () => {
+import { PropsWithHistory } from "../../model";
+
+const EventCard: FunctionComponent<PropsWithHistory> = ({ history }) => {
   const eventMock = [
     {
       name: "Circoloco",
@@ -29,7 +31,14 @@ const EventCard: FunctionComponent = () => {
   return (
     <>
       {eventMock.map(event => (
-        <CardWrapper key={event.name + "wrapper"} width={[1]}>
+        <CardWrapper
+          key={event.name + "wrapper"}
+          width={[1]}
+          onClick={() => {
+            console.log("clickeddd");
+            history.push("/ticket-list");
+          }}
+        >
           <Text fontSize={[3, 4, 5]} key={event.name + "text"}>
             {event.name}
           </Text>
