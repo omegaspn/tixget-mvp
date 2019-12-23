@@ -35,7 +35,6 @@ const EventCard: FunctionComponent<PropsWithHistory> = ({ history }) => {
           key={event.name + "wrapper"}
           width={[1]}
           onClick={() => {
-            console.log("clickeddd");
             history.push("/ticket-list");
           }}
         >

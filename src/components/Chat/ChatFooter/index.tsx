@@ -1,7 +1,12 @@
 import React, { FunctionComponent } from "react";
 import { Box, Flex, Text, Button } from "rebass";
 import styled from "styled-components";
-const ChatFooter: FunctionComponent = () => {
+
+interface ChatFooterProps {
+  onClickOpenMenu: () => void;
+}
+
+const ChatFooter: FunctionComponent<ChatFooterProps> = props => {
   const NavbarWrapper = styled(Box)`
     position: fixed;
     left: 0;
@@ -22,7 +27,10 @@ const ChatFooter: FunctionComponent = () => {
   return (
     <NavbarWrapper>
       <Flex justifyContent="space-between">
-        <LogoWrapper src="https://image.flaticon.com/icons/png/512/151/151917.png"></LogoWrapper>
+        <LogoWrapper
+          src="https://image.flaticon.com/icons/png/512/151/151917.png"
+          onClick={props.onClickOpenMenu}
+        ></LogoWrapper>
         <TextInput></TextInput>
         <Button>
           <Text>Send</Text>

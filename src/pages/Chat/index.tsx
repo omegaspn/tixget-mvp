@@ -1,12 +1,18 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { ChatHeader, ChatFooter, Status } from "../../components";
 
 const Chat: FunctionComponent = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const handleOpenMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
   return (
     <>
-      <ChatHeader></ChatHeader>
-      <Status></Status>
-      <ChatFooter></ChatFooter>
+      <ChatHeader />
+      {openMenu && <Status />}
+      <ChatFooter onClickOpenMenu={handleOpenMenu} />
     </>
   );
 };
