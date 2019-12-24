@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Box, Flex } from "rebass";
 import styled from "styled-components";
+import { urls } from "../../url";
 const Navbar: FunctionComponent = () => {
   const NavbarWrapper = styled(Box)`
     left: 0;
@@ -23,7 +24,11 @@ const Navbar: FunctionComponent = () => {
       <Box>
         <Flex justifyContent="space-between">
           <LogoWrapper src="https://i.ya-webdesign.com/images/ticket-logo-png-2.png"></LogoWrapper>
-          <LogoWrapper src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"></LogoWrapper>
+          <img
+            style={{ height: "40px" }}
+            src={urls.hamburger}
+            alt="hamburger"
+          ></img>
         </Flex>
       </Box>
       <Box>

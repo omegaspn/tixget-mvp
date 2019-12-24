@@ -1,6 +1,8 @@
 import React, { FunctionComponent } from "react";
 import { Box, Flex, Text } from "rebass";
 import styled from "styled-components";
+import { urls } from "../../../url";
+
 const ChatHeader: FunctionComponent = () => {
   const NavbarWrapper = styled(Box)`
     left: 0;
@@ -22,7 +24,7 @@ const ChatHeader: FunctionComponent = () => {
             Somchai
           </Text>
         </Flex>
-        <LogoWrapper src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"></LogoWrapper>
+        <LogoWrapper src={urls.hamburger}></LogoWrapper>
       </Flex>
     </NavbarWrapper>
   );
